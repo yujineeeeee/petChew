@@ -1,0 +1,123 @@
+/* qna.css */
+
+#Qna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../../../../public/img/phone.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    font-size : 15px;
+}
+
+.button {
+    margin: 5px;
+    background-color : lightcoral; /* 버튼의 배경색을 파란색으로 설정합니다. */
+    color: white; /* 텍스트 색상을 흰색으로 설정합니다. */
+    border: none; /* 테두리를 없앱니다. */
+    border-radius: 10px; /* 둥근 사각형으로 모양을 변경합니다. */
+    padding: 10px 20px; /* 버튼 내부의 여백을 설정합니다. */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경하여 클릭 가능한 상태로 표시합니다. */
+    transition: background-color 0.3s, color 0.3s; /* 배경색과 텍스트 색상 변화에 대한 전환 효과를 추가합니다. */
+    height: 35px; /* 버튼의 높이를 원하는 크기로 설정합니다. */
+    width: 250px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: burlywood;
+}
+
+
+h4 {
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    background-color: transparent; /* 배경을 투명하게 만듦 */
+    padding: 10px;
+    z-index: 999;
+
+}
+
+.inputDiv {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 62%;
+    max-width: 400px;
+    background-color: transparent; /* 배경을 투명하게 만듦 */
+    padding: 20px;
+    text-align: center;
+}
+
+.inputDiv input,
+.inputDiv button {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inputDiv input {
+    width: 77%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.inputDiv button {
+    width: 22%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.chat {
+    width: 62%;
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+}
+
+
+.lowerButtons {
+     display: flex;
+     flex-direction: column; /* 수직으로 정렬합니다. */
+     align-items: center; /* 가로 방향으로 중앙 정렬합니다. */
+     margin-top: 5px;
+     width: 85%;
+     white-space: pre-line; /* 텍스트 내에서의 줄바꿈을 유지합니다 */
+     font-size : 15px;
+     overflow: auto;
+     max-height: 400px; /* 예시로 높이를 지정할 수 있습니다. */
+     overflow-y: scroll;
+     padding-left: 15px;
+ }
+
+.buttonTop {
+    width: 120px; /* 버튼의 폭을 원하는 크기로 설정합니다. */
+    height: 35px; /* 버튼의 높이를 원하는 크기로 설정합니다. */
+    padding: 0;
+}
+
+#chat {
+    position: absolute;
+    bottom: 8%;
+    background-color: lightcoral;
+    color: white; /* 텍스트 색상을 흰색으로 설정합니다. */
+    border: none; /* 테두리를 없앱니다. */
+    padding: 5px 10px; /* 버튼 내부의 여백을 설정합니다. */
+    border-radius: 10px; /* 둥근 사각형으로 모양을 변경합니다. */
+    font-weight: bold;
+}
+
+#chat:hover {
+    background-color: burlywood;
+    transition: background-color 0.3s, color 0.3s; /* 배경색과 텍스트 색상 변화에 대한 전환 효과를 추가합니다. */
+}
+
+.message {
+    font-size: 14px;
+}

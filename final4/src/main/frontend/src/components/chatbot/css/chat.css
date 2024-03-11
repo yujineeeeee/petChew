@@ -1,0 +1,123 @@
+/* chat.css */
+
+#Chatbot {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../../../../public/img/phone.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    font-size: 12px;
+}
+
+.guideMessage {
+    max-width: 65%;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    color: #282c34;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+h4 {
+    position: fixed;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    background-color: transparent;
+    padding: 10px;
+    z-index: 999;
+    font-weight: bold;
+}
+
+.inputDiv {
+    position: fixed;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 62%;
+    max-width: 400px;
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    display: flex; /* Flexbox 사용 */
+    align-items: center; /* 수직 정렬 */
+}
+
+.inputDiv input {
+    flex: 1; /* 나머지 영역을 모두 채우도록 설정 */
+    width: auto; /* 너비 자동 조정 */
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.inputDiv button {
+    width: auto; /* 너비 자동 조정 */
+    padding: 10px;
+    background-color: burlywood;
+    border: 2px solid burlywood; /* 버튼의 테두리 색상 및 두께 설정 */
+    font-weight: bold;
+}
+
+.message {
+    max-width: 65%;
+    margin: 10px;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+}
+
+.chatDiv {
+    overflow-y: auto;
+    max-height: 70vh;
+    min-height: 70vh;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+.messageWait {
+    position: fixed;
+    top: 12%;
+    left: 50%;
+    font-weight: bold;
+    font-size: 14px;
+    transform: translate(-50%, -50%);
+    color: cornflowerblue;
+}
+
+.message.user {
+    color: darkcyan;
+}
+
+.message.bot {
+    color: darkslateblue;
+    white-space: pre-line;
+}
+
+.chatbotBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border: none;
+    border-radius: 30px;
+    background: #F08080;
+    color: white;
+    padding: 12px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px gray;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px; /* 버튼 영역의 너비를 텍스트에 맞게 조절 */
+}
+
+

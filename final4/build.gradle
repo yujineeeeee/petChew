@@ -1,0 +1,125 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.2'
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.bitc.fs501'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = '17'
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.3'
+    compileOnly 'org.projectlombok:lombok'
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    runtimeOnly 'com.mysql:mysql-connector-j'
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter-test:3.0.3'
+
+    //----------------------------------------마지막 프로젝트하는거 aws s3에 파일 올라가는지 테스트 할라고 하는거임
+
+    implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.6.RELEASE'
+
+// 파일 업로드를 위한 의존성 추가
+// https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation 'commons-io:commons-io:2.6'
+
+// https://mavenlibs.com/maven/dependency/commons-fileupload/commons-fileupload
+    implementation 'commons-fileupload:commons-fileupload:1.4'
+
+    implementation "com.amazonaws:aws-java-sdk-s3:1.12.281" // 추가
+
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+// 리액트 프로젝트를 스프링 프로젝트에 포함하기
+
+// 변수 선언 및 리액트 프로젝트 폴더 설정
+// $projectDir : 현재 프로젝트를 뜻함
+def frontendDir = "$projectDir/src/main/frontend"
+
+// 리액트 프로젝트가 복사될 위치 설정
+sourceSets {
+    main {
+        resources {
+            srcDirs = ["$projectDir/src/main/resources"]
+        }
+    }
+}
+
+processResources {
+    dependsOn "copyReactBuildFiles"
+}
+
+// task 키워드를 사용하여 gradle 실행 명령으로 생성
+// Exec : 실행, Copy : 복사
+// gradle 실행 명령 생성
+task installReact(type: Exec){
+//    작업 디렉토리 설정
+    workingDir "$frontendDir"
+    inputs.dir "$frontendDir"
+    group = BasePlugin.BUILD_GROUP
+
+//    리액트 모듈 다운로드 명령, os별로 명령어 다르게 입력되어 있음
+    if(System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("windows")){
+//        사용 os가 windows일 경우 실행할 명령
+        commandLine "npm.cmd", "audit", "fix"
+        commandLine "npm.cmd", "install"
+    }
+    else {
+//        사용자 os가 windows가 아닌 다른 os일 경우 실행할 명령
+        commandLine "npm", "audit", "fix"
+        commandLine "npm", "install"
+    }
+}
+
+task buildReact(type: Exec) {
+//   dependsOn : 지정한 명령 실행 후 실행하라는 의미
+    dependsOn "installReact"
+    workingDir "$frontendDir"
+    inputs.dir "$frontendDir"
+    group = BasePlugin.BUILD_GROUP
+
+    if(System.getProperty("os.name").toLowerCase(Locale.ROOT).contains("windows")) {
+//        리액트 배포 파일 생성 명령
+        commandLine "npm.cmd", "run-script", "build"
+    }
+    else {
+        commandLine "npm", "run-script", "build"
+    }
+}
+
+// 빌드된 리액트 프로젝트 파일을 스프링 프로젝트로 복사
+task copyReactBuildFiles(type: Copy) {
+    dependsOn "buildReact"
+//    빌드된 리액트 프로젝트 파일 위치
+    from "$frontendDir/build"
+//    스프링 프로젝트의 resources 폴더 아래의 static 폴더에 복사
+    into "$projectDir/src/main/resources/static"
+}
+
+// bootJar 명령 실행 시 아래의 명령 실행
+tasks.bootJar {
+    dependsOn "copyReactBuildFiles"
+}

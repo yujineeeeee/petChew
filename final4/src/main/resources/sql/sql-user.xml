@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitc.fs501.final4.mapper.UserMapper">
+
+    <insert id="registerUser" parameterType="com.bitc.fs501.final4.dto.UserDto">
+        INSERT INTO user (id, password, gu, ani_kind, create_date)
+        VALUES (#{id}, #{password}, #{gu}, #{aniKind}, NOW())
+    </insert>
+
+    <select id="login" parameterType="com.bitc.fs501.final4.dto.UserDto" resultType="com.bitc.fs501.final4.dto.UserDto">
+        SELECT id, password, gu, ani_kind, create_date
+        FROM user
+        WHERE id = #{id} AND password = #{password}
+    </select>
+
+    <select id="getUserById" parameterType="com.bitc.fs501.final4.dto.UserDto" resultType="com.bitc.fs501.final4.dto.UserDto">
+        SELECT *
+        FROM user
+        WHERE id = #{id}
+    </select>
+
+    <select id="getAnimalByUserId" parameterType="com.bitc.fs501.final4.dto.AnimalDto" resultType="com.bitc.fs501.final4.dto.AnimalDto">
+        SELECT *
+        FROM animal
+        WHERE user_id = #{id}
+    </select>
+
+    <update id="insertProfile" parameterType="com.bitc.fs501.final4.dto.UserDto">
+        UPDATE user
+        SET gu = #{gu}, interests_tag = #{interestsTag}, profile_img = #{profileImg}
+        WHERE id = #{id}
+    </update>
+
+    <update id="insertAniprofile" parameterType="com.bitc.fs501.final4.dto.AnimalDto">
+        UPDATE animal
+        SET
+        ani_kind = #{aniKind},
+        ani_kind_detail = #{aniKindDetail},
+        ani_name = #{aniName},
+        ani_age = #{aniAge},
+        ani_info = #{aniInfo}
+        WHERE user_id = #{userId}
+    </update>
+
+</mapper>

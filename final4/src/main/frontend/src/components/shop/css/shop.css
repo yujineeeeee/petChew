@@ -1,0 +1,72 @@
+.shop-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 수직 가운데 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    height: 80vh; /* 화면 전체 높이를 차지하도록 설정 */
+    margin: 0 auto; /* 수평 가운데 정렬 */
+    max-width: 100%; /* 최대 너비 설정 */
+}
+
+.shopbanner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* 이미지가 컨테이너를 가득 채우도록 설정 */
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3개의 열로 설정 */
+    row-gap: 100px; /* 이미지 사이의 간격 설정 */
+    padding: 50px 10px; /* 이미지 그리드 상단과 하단의 여백 설정 */
+    justify-items: center; /* 가로 중앙 정렬 */
+}
+
+.image-grid a {
+    display: block; /* 링크를 블록 요소로 설정하여 전체 영역을 클릭 가능하도록 합니다. */
+    text-decoration: none; /* 기본 링크 텍스트 스타일 제거 */
+}
+
+.image-grid img {
+    width: 80%; /* 이미지의 너비를 부모 요소에 맞게 조정합니다. */
+    max-height: 100%; /* 이미지의 높이를 부모 요소에 맞게 조정합니다. */
+    object-fit: contain; /* 이미지를 부모 요소에 맞게 비율을 유지하면서 채웁니다. */
+    display: block; /* 이미지를 블록 요소로 설정합니다. */
+    transition: transform 0.3s ease; /* 부드러운 변화를 위해 transition 추가 */
+}
+
+.image-grid a:hover img {
+    transform: scale(1.1); /* 이미지를 약간 확대합니다. */
+}
+
+.image-grid a {
+    display: flex; /* Flexbox를 사용하여 수직 중앙 정렬을 위한 준비 */
+    align-items: center; /* 수직 중앙 정렬 */
+    text-decoration: none; /* 기본 링크 텍스트 스타일 제거 */
+}
+
+.image-wrapper {
+    display: flex; /* Flexbox를 사용하여 이미지와 설명을 가로로 배치 */
+    align-items: center; /* 수직 중앙 정렬 */
+    position: relative; /* 상대 위치 지정 */
+    flex-direction: column; /* 요소들을 세로 방향으로 배치 */
+}
+
+.image-wrapper img {
+    width: 80%; /* 이미지의 너비를 100%로 설정하여 부모 요소에 맞춤 */
+    height: auto; /* 비율 유지 */
+}
+
+.image-description {
+    color: #282c34; /* 텍스트 색상 설정 */
+    font-weight: bold;
+    margin-top: 5px;
+    text-align: center; /* 가운데 정렬 */
+    transition: background-color 0.3s ease; /* 부드러운 전환 효과 */
+    width: 100%; /* 설명의 너비를 100%로 설정하여 이미지와 같은 너비로 설정 */
+}
+
+.banner-wrapper {
+    margin-bottom: 20px; /* 내용과의 간격을 조절할 수 있습니다. */
+}

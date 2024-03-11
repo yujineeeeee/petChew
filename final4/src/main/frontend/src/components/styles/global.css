@@ -1,0 +1,1744 @@
+:root {
+    /*버튼 태마*/
+
+    /*고스트 버튼 테투리*/
+    --btn-border: #adadad;
+
+    /*크림그레이*/
+    --creamgray--primary--btn-bg: #555555;
+
+    /*오렌지바다*/
+    --orangesea--btn-bg: #FF8C00;
+
+    /*네이비그린*/
+    --navygreen--btn-bg: #28A745;
+
+    /*보라갈적1*/
+    --purplevergundy--btn-bg: #6F42C1;
+
+    /*보라갈적2*/
+    --redviolet--btn-bg: #9C27B0;
+
+    /*bow*/
+    --bow--btn-bg: #000000;
+
+    /*하늘다홍*/
+    --skybluered--btn-bg: #50A7F6;
+
+    /*파랑빨강*/
+    --bluered--btn-bg: #007BFF;
+
+    /*버튼그림자*/
+    --light-shadow: #fff;
+    --dark-shadow: #555555;
+}
+
+.h_100{
+    /*인덱스 html안에 루트태그에 지정해줘야 높이값 제대로 먹음*/
+    height: 100%;
+}
+
+/*태그버튼용*/
+.tag_btn{
+    width:80%;
+    height: 50%;
+    margin: 10% auto;
+}
+
+
+html {
+    font-size: 16px; /* 루트 요소(html)의 폰트 크기를 16px로 설정 */
+}
+html, body{
+    height: 100%;
+}
+/* 고정페딩값 루트폰트기준 rem */
+.fix_p_025{
+    padding: .25rem;
+}
+.fix_p_05{
+    padding: .5rem;
+}
+.fix_p_1{
+  padding: 1rem;
+}
+.fix_p_2{
+    padding: 2rem;
+}
+.fix_p_3{
+    padding: 3rem;
+}
+/* 고정페딩값 루트폰트기준 rem 가로*/
+.fix_xp_025{
+    padding:0 .25rem;
+}
+.fix_xp_05{
+    padding:0 .5rem;
+}
+.fix_xp_1{
+    padding:0 1rem;
+}
+.fix_xp_2{
+    padding:0 2rem;
+}
+.fix_xp_3{
+    padding:0 3rem;
+}
+/* 고정페딩값 루트폰트기준 rem 세로*/
+.fix_yp_025{
+    padding: .25rem 0;
+}
+.fix_yp_05{
+    padding: .5rem 0;
+}
+.fix_yp_1{
+    padding: 1rem 0;
+}
+.fix_yp_2{
+    padding: 2rem 0;
+}
+.fix_yp_3{
+    padding: 3rem 0;
+}
+/* 고정페딩값 루트폰트기준 rem 상하좌우 각각*/
+.fix_tp_025{
+    padding-top: .25rem;
+}
+.fix_tp_05{
+    padding-top: .5rem;
+}
+.fix_tp_1{
+    padding-top: 1rem;
+}
+.fix_tp_2{
+    padding-top: 2rem;
+}
+.fix_tp_3{
+    padding-top: 3rem;
+}
+.fix_bp_025{
+    padding-bottom: .25rem;
+}
+.fix_bp_05{
+    padding-bottom: .5rem;
+}
+.fix_bp_1{
+    padding-bottom: 1rem;
+}
+.fix_bp_2{
+    padding-bottom: 2rem;
+}
+.fix_bp_3{
+    padding-bottom: 3rem;
+}
+.fix_lp_025{
+    padding-left: .25rem;
+}
+.fix_lp_05{
+    padding-left: .5rem;
+}
+.fix_lp_1{
+    padding-left: 1rem;
+}
+.fix_lp_2{
+    padding-left: 2rem;
+}
+.fix_lp_3{
+    padding-left: 3rem;
+}
+.fix_rp_025{
+    padding-right: .25rem;
+}
+.fix_rp_05{
+    padding-right: .5rem;
+}
+.fix_rp_1{
+    padding-right: 1rem;
+}
+.fix_rp_2{
+    padding-right: 2rem;
+}
+.fix_rp_3{
+    padding-right: 3rem;
+}
+
+/* 유동페딩값 부모너비기준 % */
+.fluid_p_5{
+    padding: 5%;
+}
+.fluid_p_10{
+    padding: 10%;
+}
+.fluid_p_15{
+    padding: 15%;
+}
+.fluid_p_20{
+    padding: 20%;
+}
+.fluid_p_25{
+    padding: 25%;
+}
+.fluid_p_30{
+    padding: 30%;
+}
+/* 유동페딩값 부모너비기준 % 가로 */
+.fluid_xp_5{
+    padding: 0 5%;
+}
+.fluid_xp_10{
+    padding: 0 10%;
+}
+.fluid_xp_15{
+    padding: 0 15%;
+}
+.fluid_xp_20{
+    padding: 0 20%;
+}
+.fluid_xp_25{
+    padding: 0 25%;
+}
+.fluid_xp_30{
+    padding: 0 30%;
+}
+/* 유동페딩값 부모너비기준 % 세로 */
+.fluid_yp_5{
+    padding: 5% 0;
+}
+.fluid_yp_10{
+    padding: 10% 0;
+}
+.fluid_yp_15{
+    padding: 15% 0;
+}
+.fluid_yp_20{
+    padding: 20% 0;
+}
+.fluid_yp_25{
+    padding: 25% 0;
+}
+.fluid_yp_30{
+    padding: 30% 0;
+}
+/* 유동페딩값 부모너비기준 % 상하좌우각각 */
+.fluid_tp_5{
+    padding-top: 5%;
+}
+.fluid_tp_10{
+    padding-top: 10%;
+}
+.fluid_tp_15{
+    padding-top: 15%;
+}
+.fluid_tp_20{
+    padding-top: 20%;
+}
+.fluid_tp_25{
+    padding-top: 25%;
+}
+.fluid_tp_30{
+    padding-top: 30%;
+}
+.fluid_bp_5{
+    padding-bottom: 5%;
+}
+.fluid_bp_10{
+    padding-bottom: 10%;
+}
+.fluid_bp_15{
+    padding-bottom: 15%;
+}
+.fluid_bp_20{
+    padding-bottom: 20%;
+}
+.fluid_bp_25{
+    padding-bottom: 25%;
+}
+.fluid_bp_30{
+    padding-bottom: 30%;
+}
+.fluid_lp_5{
+    padding-left: 5%;
+}
+.fluid_lp_10{
+    padding-left: 10%;
+}
+.fluid_lp_15{
+    padding-left: 15%;
+}
+.fluid_lp_20{
+    padding-left: 20%;
+}
+.fluid_lp_25{
+    padding-left: 25%;
+}
+.fluid_lp_30{
+    padding-left: 30%;
+}
+.fluid_rp_5{
+    padding-right: 5%;
+}
+.fluid_rp_10{
+    padding-right: 10%;
+}
+.fluid_rp_15{
+    padding-right: 15%;
+}
+.fluid_rp_20{
+    padding-right: 20%;
+}
+.fluid_rp_25{
+    padding-right: 25%;
+}
+.fluid_rp_30{
+    padding-right: 30%;
+}
+
+/* 고정마진값 루트폰트기준 rem */
+.fix_m_025{
+    margin: .25rem;
+}
+.fix_m_05{
+    margin: .5rem;
+}
+.fix_m_1{
+    margin: 1rem;
+}
+.fix_m_2{
+    margin: 2rem;
+}
+.fix_m_3{
+    margin: 3rem;
+}
+/* 고정마진값 루트폰트기준 rem 가로*/
+.fix_xm_025{
+    margin:0 .25rem;
+}
+.fix_xm_05{
+    margin:0 .5rem;
+}
+.fix_xm_1{
+    margin:0 1rem;
+}
+.fix_xm_2{
+    margin:0 2rem;
+}
+.fix_xm_3{
+    margin:0 3rem;
+}
+/* 고정마진값 루트폰트기준 rem 세로*/
+.fix_ym_025{
+    margin: .25rem 0;
+}
+.fix_ym_05{
+    margin: .5rem 0;
+}
+.fix_ym_1{
+    margin: 1rem 0;
+}
+.fix_ym_2{
+    margin: 2rem 0;
+}
+.fix_ym_3{
+    margin: 3rem 0;
+}
+/* 고정마진값 루트폰트기준 rem 상하좌우 각각*/
+.fix_tm_025{
+    margin-top: .25rem;
+}
+.fix_tm_05{
+    margin-top: .5rem;
+}
+.fix_tm_1{
+    margin-top: 1rem;
+}
+.fix_tm_2{
+    margin-top: 2rem;
+}
+.fix_tm_3{
+    margin-top: 3rem;
+}
+.fix_bm_025{
+    margin-bottom: .25rem;
+}
+.fix_bm_05{
+    margin-bottom: .5rem;
+}
+.fix_bm_1{
+    margin-bottom: 1rem;
+}
+.fix_bm_2{
+    margin-bottom: 2rem;
+}
+.fix_bm_3{
+    margin-bottom: 3rem;
+}
+.fix_lm_025{
+    margin-left: .25rem;
+}
+.fix_lm_05{
+    margin-left: .5rem;
+}
+.fix_lm_1{
+    margin-left: 1rem;
+}
+.fix_lm_2{
+    margin-left: 2rem;
+}
+.fix_lm_3{
+    margin-left: 3rem;
+}
+.fix_rm_025{
+    margin-right: .25rem;
+}
+.fix_rm_05{
+    margin-right: .5rem;
+}
+.fix_rm_1{
+    margin-right: 1rem;
+}
+.fix_rm_2{
+    margin-right: 2rem;
+}
+.fix_rm_3{
+    margin-right: 3rem;
+}
+
+/* 유동마진값 부모너비기준 % */
+
+.fluid_m_1{
+    margin: 1%;
+}
+.fluid_m_5{
+    margin: 5%;
+}
+.fluid_m_10{
+    margin: 10%;
+}
+.fluid_m_15{
+    margin: 15%;
+}
+.fluid_m_20{
+    margin: 20%;
+}
+.fluid_m_25{
+    margin: 25%;
+}
+.fluid_m_30{
+    margin: 30%;
+}
+/* 유동마진값 부모너비기준 % 가로 */
+.fluid_xm_1{
+    margin: 0 1%;
+}
+.fluid_xm_5{
+    margin: 0 5%;
+}
+.fluid_xm_10{
+    margin: 0 10%;
+}
+.fluid_xm_15{
+    margin: 0 15%;
+}
+.fluid_xm_20{
+    margin: 0 20%;
+}
+.fluid_xm_25{
+    margin: 0 25%;
+}
+.fluid_xm_30{
+    margin: 0 30%;
+}
+/* 유동마진값 부모너비기준 % 세로 */
+.fluid_ym_1{
+    margin: 1% 0;
+}
+.fluid_ym_5{
+    margin: 5% 0;
+}
+.fluid_ym_10{
+    margin: 10% 0;
+}
+.fluid_ym_15{
+    margin: 15% 0;
+}
+.fluid_ym_20{
+    margin: 20% 0;
+}
+.fluid_ym_25{
+    margin: 25% 0;
+}
+.fluid_ym_30{
+    margin: 30% 0;
+}
+/* 유동마진값 부모너비기준 % 상하좌우각각 */
+.fluid_tm_1{
+    margin-top: 1%;
+}
+.fluid_tm_5{
+    margin-top: 5%;
+}
+.fluid_tm_10{
+    margin-top: 10%;
+}
+.fluid_tm_15{
+    margin-top: 15%;
+}
+.fluid_tm_20{
+    margin-top: 20%;
+}
+.fluid_tm_25{
+    margin-top: 25%;
+}
+.fluid_tm_30{
+    margin-top: 30%;
+}
+.fluid_bm_1{
+    margin-bottom: 1%;
+}
+.fluid_bm_5{
+    margin-bottom: 5%;
+}
+.fluid_bm_10{
+    margin-bottom: 10%;
+}
+.fluid_bm_15{
+    margin-bottom: 15%;
+}
+.fluid_bm_20{
+    margin-bottom: 20%;
+}
+.fluid_bm_25{
+    margin-bottom: 25%;
+}
+.fluid_bm_30{
+    margin-bottom: 30%;
+}
+.fluid_lm_1{
+    margin-left: 1%;
+}
+.fluid_lm_5{
+    margin-left: 5%;
+}
+.fluid_lm_10{
+    margin-left: 10%;
+}
+.fluid_lm_15{
+    margin-left: 15%;
+}
+.fluid_lm_20{
+    margin-left: 20%;
+}
+.fluid_lm_25{
+    margin-left: 25%;
+}
+.fluid_lm_30{
+    margin-left: 30%;
+}
+.fluid_rm_1{
+    margin-right: 1%;
+}
+.fluid_rm_5{
+    margin-right: 5%;
+}
+.fluid_rm_10{
+    margin-right: 10%;
+}
+.fluid_rm_15{
+    margin-right: 15%;
+}
+.fluid_rm_20{
+    margin-right: 20%;
+}
+.fluid_rm_25{
+    margin-right: 25%;
+}
+.fluid_rm_30{
+    margin-right: 30%;
+}
+
+/*테스트용*/
+.testblock{
+    background: grey;
+    border: #282c34 solid 2px;
+    border-radius: 20px;
+}
+
+.box{
+    box-sizing: border-box;
+}
+
+/*비율디자인 가로세로 너비 1.6대1 최소 최대포함*/
+.w1_6{
+    width: 61.5%
+}
+.w1_6.max{
+    max-width: 61.5%
+}
+.w1_6_max{
+    max-width: 61.5%
+}
+.w1_6.min{
+    min-width: 61.5%
+}
+.w1_6_min{
+    min-width: 61.5%
+}
+.w1{
+    width: 38.5%
+}
+.w1.max{
+    max-width: 38.5%
+}
+.w1_max{
+    max-width: 38.5%
+}
+.w1.min{
+    min-width: 38.5%
+}
+.w1_min{
+    min-width: 38.5%
+}
+
+.h1_6{
+    height: 61.5%
+}
+.h1_6.max{
+    max-height: 61.5%
+}
+.h1_6.min{
+    min-height: 61.5%
+}
+.h1_6_max{
+    max-height: 61.5%
+}
+.h1_6_min{
+    min-height: 61.5%
+}
+.h1{
+    height: 38.5%
+}
+.h1.max{
+    max-height: 38.5%
+}
+.h1.min{
+    min-height: 38.5%
+}
+.h1_max{
+    max-height: 38.5%
+}
+.h1_min{
+    min-height: 38.5%
+}
+
+.h100{
+    height: 100%;
+}
+.h90{
+    height: 90%;
+}
+.h80{
+    height: 80%!important;
+}
+.h70{
+    height: 70%;
+}
+.h60{
+    height: 60%;
+}
+.h50{
+    height: 50%;
+}
+.h40{
+    height: 40%;
+}
+.h30{
+    height: 30%;
+}
+.h20{
+    height: 20%;
+}
+.h10{
+    height: 10%;
+}
+
+.font_fluid_l {
+    font-size: 3vw; /* 텍스트의 폰트 크기를 뷰포트의 너비에 따라 조절 */
+}
+.font_fluid_m {
+    font-size: 2vw; /* 텍스트의 폰트 크기를 뷰포트의 너비에 따라 조절 */
+}
+.font_fluid_s {
+    font-size: 1vw; /* 텍스트의 폰트 크기를 뷰포트의 너비에 따라 조절 */
+}
+
+@media screen and (max-width: 2000px) {
+    .modalwidth{
+        width: 60%;
+    }
+}
+
+/* 화면 가로 길이에 따라 폰트 크기 조절 */
+@media screen and (max-width: 1600px) {
+    .font_fluid_l {
+        font-size: 3.6vw;
+    }
+
+    .font_fluid_m {
+        font-size: 2.4vw;
+    }
+
+    .font_fluid_s {
+        font-size: 1.2vw; /* 화면 가로 길이가 768px 이하일 때 작은 폰트 크기로 조절 */
+    }
+    .modalwidth{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .font_fluid_l {
+        font-size: 4.4vw;
+    }
+
+    .font_fluid_m {
+        font-size: 2.9vw;
+    }
+
+    .font_fluid_s {
+        font-size: 1.45vw; /* 화면 가로 길이가 768px 이하일 때 작은 폰트 크기로 조절 */
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .font_fluid_l {
+        font-size: 5.6vw;
+    }
+
+    .font_fluid_m {
+        font-size: 3.7vw;
+    }
+
+    .font_fluid_s {
+        font-size: 1.8vw; /* 화면 가로 길이가 768px 이하일 때 작은 폰트 크기로 조절 */
+    }
+}
+
+/* 화면 가로 길이에 따라 폰트 크기 조절 */
+@media screen and (max-width: 800px) {
+    .font_fluid_l {
+        font-size: 4vw; /* 화면 가로 길이가 768px 이하일 때 큰 폰트 크기로 조절 */
+    }
+
+    .font_fluid_m {
+        font-size: 3vw; /* 화면 가로 길이가 768px 이하일 때 중간 폰트 크기로 조절 */
+    }
+
+    .font_fluid_s {
+        font-size: 2vw; /* 화면 가로 길이가 768px 이하일 때 작은 폰트 크기로 조절 */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .font_fluid_l {
+        font-size: 4.4vw; /* 화면 가로 길이가 480px 이하일 때 큰 폰트 크기로 조절 */
+    }
+
+    .font_fluid_m {
+        font-size: 3.5vw; /* 화면 가로 길이가 480px 이하일 때 중간 폰트 크기로 조절 */
+    }
+
+    .font_fluid_s {
+        font-size: 2.9vw; /* 화면 가로 길이가 480px 이하일 때 작은 폰트 크기로 조절 */
+    }
+}
+
+
+/*프레임*/
+.main_frame{
+    height: 100%;
+    width: 80%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sub_frame_col{
+    /*수직균등배치*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sub_frame_row{
+    /*수평균등배치*/
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.gap5{
+    gap: 5px;
+}
+.gap10{
+    gap: 10px;
+}
+
+.fix_sub_frame_col{
+    /*수직균등배치 고정*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.fix_sub_frame_row{
+    /*수평균등배치 고정 화면작아져도 세로정렬로 안바뀜*/
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* 고정 비율디자인 가로세로 너비 1.6대1 최소 최대포함 화면작아져도 가로값이 세로로 안바뀜*/
+.fix_w1_6{
+    width: 61.5%
+}
+.fix_w1_6.max{
+    max-width: 61.5%
+}
+.fix_w1_6_max{
+    max-width: 61.5%
+}
+.fix_w1_6.min{
+    min-width: 61.5%
+}
+.fix_w1_6_min{
+    min-width: 61.5%
+}
+.fix_w1{
+    width: 38.5%
+}
+.fix_w1.max{
+    max-width: 38.5%
+}
+.fix_w1_max{
+    max-width: 38.5%
+}
+.fix_w1.min{
+    min-width: 38.5%
+}
+.fix_w1_min{
+    min-width: 38.5%
+}
+
+.fix_h1_6{
+    height: 61.5%
+}
+.fix_h1_6.max{
+    max-height: 61.5%
+}
+.fix_h1_6.min{
+    min-height: 61.5%
+}
+.fix_h1_6_max{
+    max-height: 61.5%
+}
+.fix_h1_6_min{
+    min-height: 61.5%
+}
+.fix_h1{
+    height: 38.5%
+}
+.fix_h1.max{
+    max-height: 38.5%
+}
+.fix_h1.min{
+    min-height: 38.5%
+}
+.fix_h1_max{
+    max-height: 38.5%
+}
+.fix_h1_min{
+    min-height: 38.5%
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .sub_frame_row{
+        /*수평균등배치 수직으로 바꿈*/
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .sub_frame_col{
+        /*수직균등배치 수평으로 바꿈*/
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    /*비율디자인 가로 너비 1.6대1 최소 최대포함*/
+    /*가로 900px이하시 가로 너비값 세로 너비값으로 변경*/
+    .w1_6{
+        width: 100%;
+        height: 61.5%
+    }
+    .w1_6.max{
+        width: 100%;
+        max-height: 61.5%
+    }
+    .w1_6_max{
+        width: 100%;
+        max-height: 61.5%
+    }
+    .w1_6.min{
+        width: 100%;
+        min-height: 61.5%
+    }
+    .w1_6_min{
+        width: 100%;
+        min-height: 61.5%
+    }
+    .w1{
+        width: 100%;
+        height: 38.5%
+    }
+    .w1.max{
+        width: 100%;
+        max-height: 38.5%
+    }
+    .w1_max{
+        width: 100%;
+        max-height: 38.5%
+    }
+    .w1.min{
+        width: 100%;
+        min-height: 38.5%
+    }
+    .w1_min{
+        width: 100%;
+        min-height: 38.5%
+    }
+
+    /*가로 900px이하시 세로 너비값 가로 너비값으로 변경*/
+    .h1_6{
+        width: 61.5%;
+    }
+    .h1_6.max{
+        max-width: 61.5%;
+    }
+    .h1_6_max{
+        max-width: 61.5%;
+    }
+    .h1_6.min{
+        min-width: 61.5%;
+    }
+    .h1_6_min{
+        min-width: 61.5%;
+    }
+    .h1{
+        width: 38.5%;
+    }
+    .h1.max{
+        max-width: 38.5%;
+    }
+    .h1_max{
+        max-width: 38.5%;
+    }
+    .h1.min{
+        min-width: 38.5%
+    }
+    .h1_min{
+        min-width: 38.5%
+    }
+}
+
+.f1{
+    flex: 1;
+}
+.f1_6{
+    flex: 1.6;
+}
+
+button {
+    box-shadow: none;
+    border: none;
+    outline: none;
+}
+
+.r05{
+    border-radius: 5px;
+}
+.r10{
+    border-radius: 10px;
+}
+.r15{
+    border-radius: 15px;
+}
+.r20{
+    border-radius: 20px;
+}
+.r25{
+    border-radius: 25px;
+}
+.r30{
+    border-radius: 30px;
+}
+.r35{
+    border-radius: 35px;
+}
+.r40{
+    border-radius: 40px;
+}
+.r45{
+    border-radius: 45px;
+}
+.r50{
+    border-radius: 50px;
+}
+
+.btn_creamgray_primary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: var(--creamgray--primary--btn-bg);
+}
+
+.btn_creamgray_secondary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--creamgray--primary--btn-bg);
+    background: white;
+    border: var(--creamgray--primary--btn-bg) solid 2px;
+}
+
+.btn_creamgray_ghost{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--creamgray--primary--btn-bg);
+    background: white;
+    border: #cccccc solid 2px;
+}
+
+.btn_creamgray_reverse{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--creamgray--primary--btn-bg);
+    background: #FFF8E7;
+    border: #cccccc solid 2px;
+}
+
+.btn_orangesea_primary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: var(--orangesea--btn-bg);
+}
+
+.btn_orangesea_secondary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--orangesea--btn-bg);
+    background: white;
+    border: var(--orangesea--btn-bg) solid 2px;
+}
+
+.btn_orangesea_ghost{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--orangesea--btn-bg);
+    background: white;
+    border: var(--btn-border) solid 2px;
+}
+
+.btn_orangesea_reverse{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: #007B99;
+}
+
+.btn_navygreen_primary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: var(--navygreen--btn-bg);
+}
+
+.btn_navygreen_secondary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--navygreen--btn-bg);
+    background: white;
+    border: var(--navygreen--btn-bg) solid 2px;
+}
+
+.btn_navygreen_ghost{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--navygreen--btn-bg);
+    background: white;
+    border: var(--btn-border) solid 2px;
+}
+
+.btn_navygreen_reverse{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: #4528A7;
+}
+
+.btn_purplevergundy_primary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: var(--purplevergundy--btn-bg);
+}
+
+.btn_purplevergundy_secondary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--purplevergundy--btn-bg);
+    background: white;
+    border: var(--purplevergundy--btn-bg) solid 2px;
+}
+
+.btn_purplevergundy_ghost{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--purplevergundy--btn-bg);
+    background: white;
+    border: var(--btn-border) solid 2px;
+}
+
+.btn_purplevergundy_reverse{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: #C1426F;
+}
+
+.btn_redviolet_primary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: var(--redviolet--btn-bg);
+}
+
+.btn_redviolet_secondary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--redviolet--btn-bg);
+    background: white;
+    border: var(--redviolet--btn-bg) solid 2px;
+}
+
+.btn_redviolet_ghost{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--redviolet--btn-bg);
+    background: white;
+    border: var(--btn-border) solid 2px;
+}
+
+.btn_redviolet_reverse{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: #B0426F;
+}
+
+.btn_bow_primary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: var(--bow--btn-bg);
+}
+
+.btn_bow_secondary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--bow--btn-bg);
+    background: white;
+    border: var(--bow--btn-bg) solid 2px;
+}
+
+.btn_bow_ghost{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--bow--btn-bg);
+    background: white;
+    border: var(--btn-border) solid 2px;
+}
+
+.btn_bow_reverse{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: #adadad;
+}
+
+.btn_skybluered_primary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: var(--skybluered--btn-bg);
+}
+
+.btn_skybluered_secondary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--skybluered--btn-bg);
+    background: white;
+    border: var(--skybluered--btn-bg) solid 2px;
+}
+
+.btn_skybluered_ghost{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--skybluered--btn-bg);
+    background: white;
+    border: var(--btn-border) solid 2px;
+}
+
+.btn_skybluered_reverse{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: #F650A7;
+}
+
+.btn_bluered_primary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: var(--bluered--btn-bg);
+}
+
+.btn_bluered_secondary{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--bluered--btn-bg);
+    background: white;
+    border: var(--bluered--btn-bg) solid 2px;
+}
+
+.btn_bluered_ghost{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--bluered--btn-bg);
+    background: white;
+    border: var(--btn-border) solid 2px;
+}
+
+.btn_bluered_reverse{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: #FF3939;
+}
+
+.btn_creamgray_primary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background:  linear-gradient(90deg, #545454 0%, #5C5C8A 100%);
+}
+
+.btn_creamgray_secondary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--creamgray--primary--btn-bg);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),linear-gradient(#fff, #fff), linear-gradient(90deg, #545454 0%, #5C5C8A 100%);
+    background-origin: border-box;
+    background-clip: content-box, padding-box, border-box;
+}
+
+.btn_creamgray_reverse_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--creamgray--primary--btn-bg);
+    background: linear-gradient(90deg, #FFF7E8 0%, #EDE8E5 100%);
+    border: 2px solid #cccccc;
+}
+
+.btn_orangesea_primary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background:  linear-gradient(90deg, #FF8C00 0%, #FF7536 100%);
+}
+
+.btn_orangesea_secondary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--orangesea--btn-bg);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),linear-gradient(#fff, #fff), linear-gradient(90deg, #FF8C00 0%, #FF7536 100%);
+    background-origin: border-box;
+    background-clip: content-box, padding-box, border-box;
+}
+
+.btn_orangesea_reverse_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient(90deg, #12998F 0%, #5C73C4 99%);
+}
+
+.btn_navygreen_primary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background:  linear-gradient(135deg, #29A645 14.64%, #12998F 84.65%);
+}
+
+.btn_navygreen_secondary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--navygreen--btn-bg);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),linear-gradient(#fff, #fff), linear-gradient(135deg, #29A645 14.64%, #12998F 84.65%);
+    background-origin: border-box;
+    background-clip: content-box, padding-box, border-box;
+}
+
+.btn_navygreen_reverse_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient(90deg, #4529A6 0%, #2B5975 99%);
+}
+
+.btn_redviolet_primary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background:  linear-gradient(135deg, #D921FF 14.64%, #9633ED 85.36%);
+}
+
+.btn_redviolet_secondary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--redviolet--btn-bg);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),linear-gradient(#fff, #fff), linear-gradient(135deg, #D921FF 14.64%, #9633ED 85.36%);
+    background-origin: border-box;
+    background-clip: content-box, padding-box, border-box;
+}
+
+.btn_redviolet_reverse_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient(135deg, #B04270 14.64%, #9C26B0 84.65%);
+}
+
+.btn_purplevergundy_primary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background:  linear-gradient(120deg, #8F2EE3 13.4%, #4A00E0 86.6%);
+}
+
+.btn_purplevergundy_secondary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--purplevergundy--btn-bg);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),linear-gradient(#fff, #fff), linear-gradient(120deg, #8F2EE3 13.4%, #4A00E0 86.6%);
+    background-origin: border-box;
+    background-clip: content-box, padding-box, border-box;
+}
+
+.btn_purplevergundy_reverse_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient(120deg, #D94554 13.4%, #8A216B 86.6%);
+}
+
+.btn_bow_primary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background:  linear-gradient(90deg, #141F30 0%, #243B54 100%);
+}
+
+.btn_bow_secondary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--bow--btn-bg);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),linear-gradient(#fff, #fff), linear-gradient(90deg, #141F30 0%, #243B54 100%);
+    background-origin: border-box;
+    background-clip: content-box, padding-box, border-box;
+}
+
+.btn_bow_reverse_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient(90deg, #8F9EAB 0%, #ADADAD 100%);
+}
+
+.btn_skybluered_primary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background:  linear-gradient(120deg, #4FA6F5 13.4%, #5EDEFF 86.6%);
+}
+
+.btn_skybluered_secondary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--skybluered--btn-bg);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),linear-gradient(#fff, #fff), linear-gradient(120deg, #4FA6F5 13.4%, #5EDEFF 86.6%);
+    background-origin: border-box;
+    background-clip: content-box, padding-box, border-box;
+}
+
+.btn_skybluered_reverse_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient(90deg, #F54FA6 0%, #FA70FF 100%);
+}
+
+.btn_bluered_primary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background:  linear-gradient(90deg, #007AFF 0%, #708CFF 100%);
+}
+
+.btn_bluered_secondary_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: var(--bluered--btn-bg);
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),linear-gradient(#fff, #fff), linear-gradient(90deg, #007AFF 0%, #708CFF 100%);
+    background-origin: border-box;
+    background-clip: content-box, padding-box, border-box;
+}
+
+.btn_bluered_reverse_gradi{
+    line-height: normal;
+    font-style: normal;
+    text-align: center;
+    padding: 0.7vw;
+    font-weight: 400;
+    color: white;
+    background: linear-gradient(90deg, #FF3838 0%, #FF00A8 100%);
+}
+
+/*버튼인터렉션 테마*/
+/*베이지톤이나 밝은채도아니면 비추*/
+.morph_hovering{
+
+    box-shadow: -5px -5px 10px #fff,  5px 5px 10px #ADADAD;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+
+    &:hover {
+        box-shadow: -2px -2px 5px #fff, 2px 2px 5px #ADADAD;
+    }
+
+    &:active {
+        box-shadow: inset -1px -1px 3px #fff, inset 1px 1px 3px #ADADAD;
+    }
+
+}
+
+.search{
+    position: relative;
+    width: 80%;
+    margin: 10% auto;
+}
+
+.search_text{
+    width: 100%;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.search_icon{
+    position: absolute;
+    width: 17px;
+    top: 10px;
+    right: 20px;
+    margin: 0;
+}
+
+.profile_container{
+    width: 80%;
+    margin: 5% auto;
+}
+
+.profile_icon{
+    width: 40%;
+}
+
+.user_recommend_container{
+    width: 100%;
+    margin: 5% auto;
+}
+
+.img_fitter{
+    width: 100%; /* 이미지의 너비를 부모 div에 맞게 100%로 설정 */
+    height: 90%; /* 이미지의 높이를 자동으로 조정하여 비율 유지 */
+    display: block; /* 이미지를 블록 요소로 설정하여 가로 중앙 정렬 */
+    margin: 0 auto;
+}
+
+.img_full{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+}
+
+
+.custom-slider .slick-track {
+    height: 100% !important;
+}
+
+@media (max-width: 768px) {
+    .container{
+        width: 100%;
+        padding: 0;
+        margin: auto 0;
+    }
+
+    .container.row {
+        flex-direction: column; /* 세로 방향으로 열을 배치하고 주축을 반대로 변경 */
+        width: 100%;
+
+    }
+    .col.mt-2 {
+        width: 100%; /* 전체 너비로 설정 */
+    }
+    .col-4{
+        width: 100%;
+    }
+    .col-1{
+        width: 15%;
+    }
+    .widthcontrol{
+        width: 33%;
+    }
+    .mobilehide{
+        display: none;
+    }
+    .main-container{
+        height: 70vh;
+    }
+    /*.logo-image{*/
+    /*    width: 100%;*/
+    /*    height: 70%;*/
+    /*    object-fit: contain;*/
+    /*}*/
+    .logo-image-container{
+        height: 150px;
+        margin-top: 0!important;
+    }
+    .modalwidth{
+        width: 90%;
+    }
+}
+
+.buttonContainer {
+    z-index: 1000; /* 충분히 큰 값을 지정하여 다른 요소들보다 위에 렌더링되도록 설정 */
+    /* 다른 스타일 속성들도 필요에 따라 추가할 수 있습니다. */
+}
+
+.feed-container {
+    /*border: 2px solid black;*/
+    height: 90vh;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+
+

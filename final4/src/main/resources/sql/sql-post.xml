@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitc.fs501.final4.mapper.PostMapper">
+
+    <select id="selectPostList" parameterType="String" resultType="com.bitc.fs501.final4.dto.PostDto">
+        SELECT post_idx, post_id, post_date, post_content, post_tag, post_hit_cnt
+        FROM post
+        WHERE
+        <foreach collection="interestsTag.split(' ')" item="item" separator=" OR " open="(" close=")">
+            post_tag LIKE CONCAT('%', #{item}, '%')
+        </foreach>
+        OR
+        <foreach collection="interestsTag.split(',')" item="item" separator=" OR " open="(" close=")">
+            post_tag LIKE CONCAT('%', #{item}, '%')
+        </foreach>
+        ORDER BY post_hit_cnt DESC, post_date DESC
+    </select>
+
+    <select id="selectPostByTag" parameterType="String" resultType="com.bitc.fs501.final4.dto.PostDto">
+        SELECT post_idx, post_id, post_date, post_content, post_tag, post_hit_cnt
+        FROM post
+        WHERE
+<!--        WHERE post_tag LIKE CONCAT('%',#{searchTag},'%')-->
+        <foreach collection="searchTag.split(' ')" item="item" separator=" OR " open="(" close=")">
+            post_tag LIKE CONCAT('%', #{item}, '%')
+        </foreach>
+        OR
+        <foreach collection="searchTag.split(',')" item="item" separator=" OR " open="(" close=")">
+            post_tag LIKE CONCAT('%', #{item}, '%')
+        </foreach>
+
+        ORDER BY post_hit_cnt DESC, post_date DESC
+    </select>
+
+    <insert id="insertPost" parameterType="com.bitc.fs501.final4.dto.PostDto" useGeneratedKeys="true"
+            keyProperty="postIdx">
+        INSERT INTO post (post_id, post_date, post_content, post_tag)
+        VALUES (#{postId}, NOW(), #{postContent}, #{postTag})
+    </insert>
+
+    <insert id="insertPostFileList" parameterType="com.bitc.fs501.final4.dto.PostFileDto">
+        INSERT INTO post_file (file_post_id, file_post_idx, file_address)
+        VALUES
+        <foreach collection="list" item="item" separator=",">
+            (#{item.filePostId}, #{item.filePostIdx}, #{item.fileAddress})
+        </foreach>
+    </insert>
+
+    <select id="selectPostFileList" parameterType="int" resultType="com.bitc.fs501.final4.dto.PostFileDto">
+        SELECT file_idx, file_post_id, file_post_idx, file_address
+        FROM post_file
+        WHERE file_post_idx = #{postIdx}
+    </select>
+
+    <delete id="deletePost" parameterType="int">
+        delete from post
+        where post_idx = #{postIdx}
+    </delete>
+
+
+    <select id="selectCommentList" parameterType="int" resultType="com.bitc.fs501.final4.dto.PostCommentDto">
+        SELECT post_cmt_idx, post_idx, post_cmt_id, post_cmt_content, post_cmt_date
+        FROM post_comment
+        WHERE post_idx = #{postIdx}
+    </select>
+
+<!--    -->
+    <select id="postout" resultType="com.bitc.fs501.final4.dto.AllDto">
+        SELECT post_file.*, post.*
+        FROM post_file
+        JOIN post ON post_file.file_post_idx = post.post_idx
+        LEFT JOIN user ON user.id = 'test1'
+        ORDER BY
+        CASE WHEN user.interests_tag = post.post_tag THEN 0 ELSE 1 END,
+        post.post_hit_cnt DESC,
+        post.post_date DESC;
+    </select>
+
+    <insert id="posting" parameterType="com.bitc.fs501.final4.dto.PostDto">
+        INSERT INTO post (post_id, post_date, post_content, post_tag)
+        VALUES ('test1', NOW(), #{postContent}, #{postTag})
+    </insert>
+
+<!--    <insert id="insertComment" parameterType="com.bitc.fs501.final4.dto.CmtDto" useGeneratedKeys="true"-->
+<!--            keyProperty="postCmtIdx">-->
+<!--        INSERT INTO post_comment (post_idx, post_cmt_id, post_cmt_content, post_cmt_date)-->
+<!--        VALUES (#{postIdx}, #{postCmtId}, #{postCmtContent}, NOW())-->
+<!--    </insert>-->
+
+    <select id="selectCmtList" parameterType="int" resultType="com.bitc.fs501.final4.dto.CmtDto">
+        SELECT *
+        FROM post_comment
+        WHERE post_idx = #{postIdx}
+        ORDER BY post_cmt_date DESC
+    </select>
+
+    <delete id="deleteCmt" parameterType="com.bitc.fs501.final4.dto.CmtDto">
+        DELETE FROM post_comment
+        WHERE post_idx = #{postIdx} AND post_cmt_idx = #{postCmtIdx}
+    </delete>
+
+    <insert id="insertComment" parameterType="com.bitc.fs501.final4.dto.CmtDto" useGeneratedKeys="true"
+            keyProperty="postCmtIdx">
+        INSERT INTO post_comment (post_idx, post_cmt_id, post_cmt_content, post_cmt_date)
+        VALUES (#{postIdx}, #{postCmtId}, #{postCmtContent}, NOW())
+    </insert>
+
+</mapper>

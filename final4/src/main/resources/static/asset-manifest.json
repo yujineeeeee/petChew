@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.703c72ee.css",
+    "main.js": "/static/js/main.c295b388.js",
+    "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
+    "static/media/happynewyear.ttf": "/static/media/happynewyear.2ff0ea8f9882a595cb9d.ttf",
+    "static/media/abogle.ttf": "/static/media/abogle.4e92a75fb97d248ae158.ttf",
+    "static/media/bgconvers.png": "/static/media/bgconvers.e6a6c6c408c2839ab65a.png",
+    "static/media/banner.png": "/static/media/banner.2a287a55db8136d0a7d1.png",
+    "static/media/shopping.png": "/static/media/shopping.6707f869a3f374e390a6.png",
+    "static/media/ic_kakao.png": "/static/media/ic_kakao.1ca9dfb6461c79275ece.png",
+    "static/media/hospunique.png": "/static/media/hospunique.eb2e56e8a77317113a6c.png",
+    "static/media/right_icon.png": "/static/media/right_icon.09e93e32ee23080fcad0.png",
+    "static/media/phone.png": "/static/media/phone.8e59faf41d1d5832c44a.png",
+    "static/media/left_icon.png": "/static/media/left_icon.34afef3c0ddb64d7dc83.png",
+    "static/media/ic_comment.png": "/static/media/ic_comment.b1ea13d81bd908b3de55.png",
+    "static/media/copy.png": "/static/media/copy.2f255caf554a88f9861f.png",
+    "index.html": "/index.html",
+    "main.703c72ee.css.map": "/static/css/main.703c72ee.css.map",
+    "main.c295b388.js.map": "/static/js/main.c295b388.js.map",
+    "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.703c72ee.css",
+    "static/js/main.c295b388.js"
+  ]
+}
